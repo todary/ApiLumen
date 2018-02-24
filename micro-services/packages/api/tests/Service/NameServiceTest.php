@@ -1,7 +1,7 @@
 <?php
 
 
-use tajawal\Api\Service\NameService;
+use tajawal\Api\Service\SearchNameService;
 
 class NameServiceTest extends \PHPUnit\Framework\TestCase
 {
@@ -27,7 +27,7 @@ class NameServiceTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->nameServiceObject = new NameService('test');
+        $this->nameServiceObject = new SearchNameService('test');
     }
 
     public function testSearchNameService()

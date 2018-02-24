@@ -22,6 +22,10 @@ and allow sorting by:
 - Hotel Name
 - Price
 
+##Guidelines
+the service can be found under 'micro-services/packages'
+search logic  is in located under api
+sort logic  is in located under sort
 
 
 ## Installation
@@ -64,12 +68,12 @@ to search by date
 http://localhost/tajawalApiLumen/public/tajawal/date?from=10-10-2020&to=15-10-2020  
 ```
 
-to sort add anther parameter (sort) type(name | price)
+to sort add anther parameter (sort) type(name | price)  & order (1) to sort asc (0) to sort desc
 Example
 
 to search by name and sort by price
 ```
-http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  
+http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price&order=1  
 ```
 
 
@@ -96,6 +100,8 @@ http://localhost/tajawalApiLumen/tests/coverage/sort/index.html
 
 * [PHP7.1](http://php.net)
 * [lumen5.5](https://lumen.laravel.com/docs/5.6)
+* [Micro Service]
+
 
 
 

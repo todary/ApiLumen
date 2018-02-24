@@ -2,16 +2,16 @@
 
 namespace tajawal\Sort;
 
-use tajawal\Sort\SortFactory\SortFactory;
-use tajawal\Sort\EnteryPointInterface;
+use tajawal\Sort\Sort\ArraySort;
+
 
 class EntryPointSort implements EnteryPointInterface
 {
 
-    public function processRequest(string $type, array $data)
+    public function processRequest(string $field, array $data, $order = 1)
     {
-        $requestObject = new SortFactory();
-        $reslut = $requestObject->create($type, $data);
-        return $reslut->sort();
+
+        $requestObject = new ArraySort();
+        return $requestObject->sort($field,$data,$order);
     }
 }

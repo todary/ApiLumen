@@ -9,10 +9,10 @@
 
 namespace tajawal\Api\ServiceFactory;
 
-use tajawal\Api\Service\NameService;
-use tajawal\Api\Service\DestinationService;
-use tajawal\Api\Service\PriceService;
-use tajawal\Api\Service\DateService;
+use tajawal\Api\Service\SearchNameService;
+use tajawal\Api\Service\SearchDestinationService;
+use tajawal\Api\Service\SearchPriceService;
+use tajawal\Api\Service\SearchDateService;
 
 
 /**
@@ -32,16 +32,16 @@ class ServiceFactory extends FactoryMethod
 
         switch ($path) {
             case 'tajawal/name':
-                $object = new NameService($data['name']);
+                $object = new SearchNameService($data['name']);
                 return $object;
             case 'tajawal/destination':
-                $object = new DestinationService($data['city']);
+                $object = new SearchDestinationService($data['city']);
                 return $object;
             case 'tajawal/price':
-                $object = new PriceService($data['min'], $data['max']);
+                $object = new SearchPriceService($data['min'], $data['max']);
                 return $object;
             case 'tajawal/date':
-                $object = new DateService($data['from'], $data['to']);
+                $object = new SearchDateService($data['from'], $data['to']);
                 return $object;
             default:
                 throw new \InvalidArgumentException("$path is not a valid Transport");

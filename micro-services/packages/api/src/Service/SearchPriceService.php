@@ -8,12 +8,13 @@
 
 namespace tajawal\Api\Service;
 
-use tajawal\Api\Service\ServiceInterface;
+use tajawal\Api\Service\SearchServiceInterface;
 
 /**
- * Class PriceService
+ * Class SearchPriceService
+ * @package tajawal\Api\Service
  */
-class PriceService implements ServiceInterface
+class SearchPriceService implements SearchServiceInterface
 {
 
 

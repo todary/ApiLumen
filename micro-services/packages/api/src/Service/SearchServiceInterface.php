@@ -8,7 +8,10 @@
 
 namespace tajawal\Api\Service;
 
-interface ServiceInterface
+interface SearchServiceInterface
 {
+    /**
+     * @return mixed
+     */
     public function search();
 }

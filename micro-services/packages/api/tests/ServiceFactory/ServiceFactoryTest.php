@@ -2,10 +2,10 @@
 
 
 use  tajawal\Api\ServiceFactory\ServiceFactory;
-use tajawal\Api\Service\DateService;
-use tajawal\Api\Service\DestinationService;
-use tajawal\Api\Service\NameService;
-use tajawal\Api\Service\PriceService;
+use tajawal\Api\Service\SearchDateService;
+use tajawal\Api\Service\SearchDestinationService;
+use tajawal\Api\Service\SearchNameService;
+use tajawal\Api\Service\SearchPriceService;
 
 class ServiceFactoryTest extends \PHPUnit\Framework\TestCase
 {
@@ -29,19 +29,19 @@ class ServiceFactoryTest extends \PHPUnit\Framework\TestCase
 
         return [
             [
-                new NameService( '')
+                new SearchNameService( '')
                 , $object->create('tajawal/name', '', [], ['name' => ''])
             ],
             [
-                new DestinationService( '')
+                new SearchDestinationService( '')
                 , $object->create('tajawal/destination', '', [], ['city' => ''])
             ],
             [
-                new PriceService(0, 0)
+                new SearchPriceService(0, 0)
                 , $object->create('tajawal/price', '', [], ['min' => 0, 'max' => 0])
             ],
             [
-                new DateService( '10-10-2020', '15-10-2020')
+                new SearchDateService( '10-10-2020', '15-10-2020')
                 , $object->create('tajawal/date', '', [], ['from' => '10-10-2020', 'to' => '15-10-2020'])
             ]
         ];

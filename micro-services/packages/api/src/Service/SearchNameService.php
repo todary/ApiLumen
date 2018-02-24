@@ -8,14 +8,14 @@
 
 namespace tajawal\Api\Service;
 
-use tajawal\Api\Service\ServiceInterface;
+use tajawal\Api\Service\SearchServiceInterface;
 
 /**
- * Class DestinationService
+ * Class SearchNameService
+ * @package tajawal\Api\Service
  */
-class DestinationService implements ServiceInterface
+class SearchNameService implements SearchServiceInterface
 {
-
 
     /**
      * @var array
@@ -25,28 +25,27 @@ class DestinationService implements ServiceInterface
     /**
      * @var
      */
-    protected $destination;
+    protected $name;
 
 
 
     /**
-     * DestinationService constructor.
-     * @param string $filterDestination
+     * NameService constructor.
+     * @param string $filterName
      */
-    public function __construct(string $filterDestination)
+    public function __construct(string $filterName)
     {
-        $this->destination = $filterDestination;
+        $this->name = $filterName;
     }
 
     /**
      * @return array
      */
-    public function search() :array
+    public function search(): array
     {
         $hotelsCollection = collect($this->hotels);
-        $hotelsCollection = $hotelsCollection->where('city',$this->destination)->all();
+        $hotelsCollection = $hotelsCollection->where('name',$this->name)->all();
         return $hotelsCollection ;
-
     }
 
 

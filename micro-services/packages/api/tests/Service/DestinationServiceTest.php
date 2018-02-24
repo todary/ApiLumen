@@ -1,6 +1,6 @@
 <?php
 
-use tajawal\Api\Service\DestinationService;
+use tajawal\Api\Service\SearchDestinationService;
 
 class DestinationServiceTest extends \PHPUnit\Framework\TestCase
 {
@@ -26,7 +26,7 @@ class DestinationServiceTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->destinationServiceObject = new DestinationService('Manila');
+        $this->destinationServiceObject = new SearchDestinationService('Manila');
     }
 
     public function testSearchDestinationService()

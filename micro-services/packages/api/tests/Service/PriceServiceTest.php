@@ -1,6 +1,6 @@
 <?php
 
-use tajawal\Api\Service\PriceService;
+use tajawal\Api\Service\SearchPriceService;
 
 class PriceServiceTest extends \PHPUnit\Framework\TestCase
 {
@@ -26,7 +26,7 @@ class PriceServiceTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->priceServiceObject = new PriceService(10,100);
+        $this->priceServiceObject = new SearchPriceService(10,100);
     }
 
     public function testSearchPriceService()

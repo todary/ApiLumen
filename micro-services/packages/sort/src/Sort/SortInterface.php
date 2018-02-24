@@ -9,13 +9,13 @@ namespace tajawal\Sort\Sort;
  */
 interface SortInterface
 {
+
+
     /**
-     * SortInterface constructor.
+     * @param string $field
      * @param array $data
+     * @param $order
+     * @return mixed
      */
-    public function __construct(array  $data);
-    /**
-     * @return array
-     */
-    public function sort();
+    public function sort(string $field,array $data, $order);
 }

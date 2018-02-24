@@ -1,6 +1,6 @@
 <?php
 
-use tajawal\Api\Service\DateService;
+use tajawal\Api\Service\SearchDateService;
 
 class DateServiceTest extends \PHPUnit\Framework\TestCase
 {
@@ -25,7 +25,7 @@ class DateServiceTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->dataServiceObject = new DateService('22-10-2020','22-11-2020');
+        $this->dataServiceObject = new SearchDateService('22-10-2020','22-11-2020');
     }
 
     public function testSearchDateService()

@@ -8,12 +8,13 @@
 
 namespace tajawal\Api\Service;
 
-use tajawal\Api\Service\ServiceInterface;
+use tajawal\Api\Service\SearchServiceInterface;
 
 /**
- * Class DateService
+ * Class SearchDateService
+ * @package tajawal\Api\Service
  */
-class DateService implements ServiceInterface
+class SearchDateService implements SearchServiceInterface
 {
 
     /**

@@ -1,12 +1,11 @@
 <?php
 
-use tajawal\Sort\sort\NameSort;
-use tajawal\Sort\sort\PriceSort;
+use tajawal\Sort\Sort\ArraySort;
 
 class SortMethodTest extends \PHPUnit\Framework\TestCase
 {
     protected $nameSortObject;
-    protected $priceSortObject;
+    protected $arraySortObject;
     protected $data = [
         [
             'name' => 'test',
@@ -27,17 +26,16 @@ class SortMethodTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
-        $this->nameSortObject = new NameSort($this->data);
-        $this->priceSortObject = new PriceSort($this->data);
+        $this->arraySortObject = new ArraySort;
     }
 
     public function testNameSort()
     {
-        $this->assertEquals($this->data, $this->nameSortObject->sort());
+        $this->assertEquals($this->data, $this->arraySortObject->sort('name',$this->data,1));
     }
 
     public function testPriceSort()
     {
-        $this->assertEquals($this->data, $this->priceSortObject->sort());
+        $this->assertEquals($this->data, $this->arraySortObject->sort('price',$this->data,0));
     }
 }
