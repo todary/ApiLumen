@@ -26,7 +26,7 @@ and allow sorting by:
 - the service can be found under 'micro-services/packages'
 - search logic is  located under api
 - sort logic is  located under sort
-
+-(search & sort) are single service can used it Individually
 
 ## Installation
 Using Composer :
@@ -40,38 +40,36 @@ If you don't have composer, you can get it from [Composer](https://getcomposer.o
 
 ## How to  Run the application
 this application used by call route 
-types = name,destination,price,date
+#### types = name,destination,price,date
 ```
 http://localhost/tajawalApiLumen/public/tajawal/{type}
 ```
 
-to search by name
+##### to search by name
 ```
 http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  
 ```
 
-to search by destination
+##### to search by destination
 ```
 http://localhost/tajawalApiLumen/public/tajawal/destination?city=Manila&sort=price  
 
 ```
 
 
-to search by price
+##### to search by price
 ```
-http://localhost/tajawalApiLumen/public/tajawal/price?&min=1.2&max=100&sort=price  to search by price
+http://localhost/tajawalApiLumen/public/tajawal/price?&min=1.2&max=100&sort=price  
 
 ```
 
-to search by date
+##### to search by date
 ```
 http://localhost/tajawalApiLumen/public/tajawal/date?from=10-10-2020&to=15-10-2020  
 ```
 
-to sort add anther parameter (sort) type(name | price)  & order (1) to sort asc (0) to sort desc
-Example
-
-to search by name and sort by price
+### to sort add anther parameter (sort) type(name | price)  & order (1) to sort asc (0) to sort desc
+##### Example to search by name and sort by price
 ```
 http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price&order=1  
 ```
