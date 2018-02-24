@@ -22,7 +22,7 @@ and allow sorting by:
 - Hotel Name
 - Price
 
-##Guidelines
+### Guidelines
 the service can be found under 'micro-services/packages'
 search logic  is in located under api
 sort logic  is in located under sort
