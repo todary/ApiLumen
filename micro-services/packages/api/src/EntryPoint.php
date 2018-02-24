@@ -29,7 +29,7 @@ class EntryPoint implements EnteryPointInterface
         if (isset($data['sort']) && !empty($data['sort']))
         {
             $sortEndpoint = new EntryPointSort();
-            $reslutHotels = $sortEndpoint ->processRequest($data['sort'], $hotels);
+            $reslutHotels = $sortEndpoint ->processRequest($data['sort'], $reslutHotels);
         }
 
         echo json_encode(array_values($reslutHotels));
