@@ -24,4 +24,8 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
+
+    <logging>
+        <log type="coverage-html" target="tests/coverage" showUncoveredFiles="false"/>
+    </logging>
 </phpunit>

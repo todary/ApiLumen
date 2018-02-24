@@ -28,7 +28,7 @@ class SortMethodTest extends \PHPUnit\Framework\TestCase
     public function setUp()
     {
         $this->nameSortObject = new NameSort($this->data);
-        $this->priceSortObject = new NameSort($this->data);
+        $this->priceSortObject = new PriceSort($this->data);
     }
 
     public function testNameSort()

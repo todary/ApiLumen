@@ -79,8 +79,7 @@ To run tests make sure you are in the main folder, and then you can run this com
 ```
 
 ## My coverage for  testing
-tajawal/app/src/tests/coverage/src/index.html
-
+http://localhost/tajawalApiLumen/tests/coverage/sort/index.html
 
 ## Built With
 
