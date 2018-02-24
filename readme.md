@@ -85,10 +85,18 @@ To run tests make sure you are in the main folder, and then you can run this com
 ## My coverage for  testing
 http://localhost/tajawalApiLumen/tests/coverage/sort/index.html
 
+### CI
+
+- Implement[scrutinizer-ci](https://scrutinizer-ci.com)  CI tool for the project
+
+![ScreenShot](scrutinizer-ci.png)
+
 
 ## Built With
 
 * [PHP7.1](http://php.net)
 * [lumen5.5](https://lumen.laravel.com/docs/5.6)
+
+
 
 
