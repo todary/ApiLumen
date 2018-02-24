@@ -16,5 +16,5 @@ use Illuminate\Http\Request;
 
 $router->get('/tajawal/{type}', function (Request $request) {
     $routes = new EntryPoint();
-    $routes->processRequest($request->path(), $request->getMethod(), $request->headers->all(), $request->all());
+    return $routes->processRequest($request->path(), $request->getMethod(), $request->headers->all(), $request->all());
 });

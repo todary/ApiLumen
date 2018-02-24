@@ -3,16 +3,18 @@
 namespace tajawal\Api;
 
 
+use Illuminate\Http\Request;
 use tajawal\Api\ServiceFactory\ServiceFactory;
 use tajawal\Sort\EntryPointSort;
 class EntryPoint implements EnteryPointInterface
 {
 
-    /**Enter And end Point for any request
+    /**
      * @param string $path
      * @param string $method
      * @param array $headers
      * @param $data
+     * @return \Illuminate\Http\JsonResponse
      */
     public function processRequest(string $path, string $method, array $headers, $data)
     {
@@ -31,8 +33,6 @@ class EntryPoint implements EnteryPointInterface
             $sortEndpoint = new EntryPointSort();
             $reslutHotels = $sortEndpoint ->processRequest($data['sort'], $reslutHotels);
         }
-
-        echo json_encode(array_values($reslutHotels));
-        die();
+        return response()->json(array_values($reslutHotels));
     }
 }

@@ -41,31 +41,35 @@ types = name,destination,price,date
 http://localhost/tajawalApiLumen/public/tajawal/{type}
 ```
 
+to search by name
 ```
-http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  to search by name
-```
-
-```
-http://localhost/tajawalApiLumen/public/tajawal/destination?city=Manila&sort=price  to search by destination
-
+http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  
 ```
 
+to search by destination
+```
+http://localhost/tajawalApiLumen/public/tajawal/destination?city=Manila&sort=price  
 
+```
+
+
+to search by price
 ```
 http://localhost/tajawalApiLumen/public/tajawal/price?&min=1.2&max=100&sort=price  to search by price
 
 ```
 
-
+to search by date
 ```
-http://localhost/tajawalApiLumen/public/tajawal/date?from=10-10-2020&to=15-10-2020  to search by date
+http://localhost/tajawalApiLumen/public/tajawal/date?from=10-10-2020&to=15-10-2020  
 ```
 
 to sort add anther parameter (sort) type(name | price)
 Example
 
+to search by name and sort by price
 ```
-http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  to search by name and sort by price
+http://localhost/tajawalApiLumen/public/tajawal/name?name=Concorde Hotel&sort=price  
 ```
 
 
